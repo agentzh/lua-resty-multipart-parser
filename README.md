@@ -8,6 +8,7 @@ Table of Contents
 
 * [Name](#name)
 * [Synopsis](#synopsis)
+* [Description](#description)
 * [TODO](#todo)
 * [Community](#community)
     * [English Mailing List](#english-mailing-list)
@@ -45,10 +46,21 @@ while true do
 end
 ```
 
+Description
+===========
+
+This Lua library provides a simple parser for the multipart data format. Unlike the [lua-resty-upload](https://github.com/openresty/lua-resty-upload) library,
+this parser does not support streaming processing of file uploads using the multipart format. However, it is more flexible in that it can be used
+to parse buffered request bodies read by the builtin request body reader of the NGINX core.
+
+Anyway, be very careful when using this for large file uploads. Use `lua-resty-upload` instead.
+
 TODO
 ====
 
 * Better error reporting.
+
+[Back to TOC](#table-of-contents)
 
 Community
 =========
